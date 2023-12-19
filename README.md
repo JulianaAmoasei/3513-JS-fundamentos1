@@ -1,55 +1,54 @@
-1) Crie uma variável contendo uma frase. Em seguida, exiba no console o comprimento da frase e a mesma frase em constras maiúsculas.
+1) Crie variáveis que armazenem o valor do saldo, de depósito e de um saque de uma conta bancária, depois realize operações de adição e subtração entre eles utilizando uma variável chamada `operacao`, considerando a função de cada variável criada anteriormente. Exiba os resultados finais no console.
 
 ```js
-const frase = 'Esta é uma frase de exemplo.';
-console.log(frase.length); // Comprimento da frase
-console.log(frase.toUpperCase()); // Frase em constras maiúsculas
+let saldo = 1000;
+const saque = 50;
+const deposito = 500;
+const operacao = saldo - saque;
+
+console.log('Saldo:', saldo); 
+console.log('Saldo após saque:', operacao);
 ```
 
-2) Declare duas variáveis, uma inicializada com valor null e outra que não recebe atribuição (resultando em undefined). Exiba os valores no console.
+2) Crie uma variável numérica com um valor. Utilize um operador ternário para verificar se esse valor é par ou ímpar. Exiba o resultado no console.
 
 ```js
-const valorNull = null;
-let valorUndefined;
-
-console.log('Valor de valorNull:', valorNull); // Saída: null
-console.log('Valor de valorUndefined:', valorUndefined); // Saída: undefined
+const numero = 7;
+const resultado = numero % 2 === 0 ? 'Par' : 'Ímpar';
+console.log(resultado); // Ímpar
 ```
 
-3) Crie 3 variáveis de tipos diferentes, utilize template strings para combinar os diferentes tipos de dados (number, string, boolean) em uma única string e exiba o resultado no console.
+3) Considere uma situação em que você está verificando se um usuário está logado e tem permissão de administrador para acessar determinada funcionalidade. Utilize variáveis booleanas para simular essas condições e use o operador AND para verificar se ambas são verdadeiras.
 
 ```js
-const numero = 42;
-const texto = ' é a resposta.';
-const booleano = true;
+const logado = true;
+const admin = false;
 
-const combinacao = `${numero} ${texto} É verdade? ${booleano}`;
-console.log(combinacao);
+const resultado = logado && admin;
+
+console.log('Administrador logado no sistema:', resultado); 
 ```
 
-4) Crie uma variável numérica e uma string. Faça a conversão da variável numérica para string e da string para número. Exiba os tipos de dados resultantes no console.
+4) Declare duas variáveis booleanas e use o operador OR para verificar se pelo menos uma delas é verdadeira. Exiba o resultado no console.
 
 ```js
-const numero = 42;
-const texto = '10';
+const condicao1 = true;
+const condicao2 = false;
 
-const numeroConvertido = String(numero);
-const textoConvertido = Number(texto);
+const resultado = condicao1 || condicao2;
 
-console.log('Tipo de dado após conversão de número para string: ', typeof numeroConvertido);
-console.log('Tipo de dado após conversão de string para número: ', typeof textoConvertido);
+console.log('Resultado do operador OR:', resultado); // Saída: true
 ```
 
-5) Crie uma variável com uma string e utilize métodos de manipulação de strings, como toUpperCase, toLowerCase, slice ou outros, para modificar a string original. Exiba os resultados finais no console.
+5) Imagine um sistema que determina se um usuário tem idade suficiente para comprar o ingresso para um show. Declare duas variáveis que determinem a idade mínima e qual a idade do usuário e utilize estruturas condicionais (if, else) para determinar se o usuário pode realizar a compra.
 
 ```js
-const texto = 'JavaScript é incrível!';
+const idadeMinima = 18;
+const idadeUsuario = 21;
 
-const maiusculas = texto.toUpperCase();
-const minusculas = texto.toLowerCase();
-const parteDaString = texto.slice(0, 10);
-
-console.log('Texto em maiúsculas:', maiusculas);
-console.log('Texto em minúsculas:', minusculas);
-console.log('Parte da string:', parteDaString);
+if (idadeUsuario >= idadeMinima) {
+    console.log('Você pode comprar o ingresso. Bom show!');
+} else {
+    console.log('Você não tem idade suficiente para comprar o ingresso.');
+}
 ```
